@@ -1,3 +1,10 @@
 spring:
   application:
     name: money-flow
+
+money-flow:
+  account-currency: EUR
+  bank-statement-api:
+    base-url: http://localhost:8081
+  balance-report-api:
+    base-url: http://localhost:8082

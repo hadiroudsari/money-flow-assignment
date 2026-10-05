@@ -51,22 +51,18 @@ class BankStatementClientPactTest {
     }
 
     @Test
-    @PactTestFor(pactMethod ="monthlyTransactions")
-    void shouldFetchMonthlyTransaction(MockServer mockServer){
+    @PactTestFor(pactMethod = "monthlyTransactions")
+    void shouldFetchMonthlyTransaction(MockServer mockServer) {
 
-        var client= new BankStatementClient(mockServer.getUrl());
-        var transactions= client.getTransactions(YearMonth.of(2026,9));
+        var client = new BankStatementClient(mockServer.getUrl());
+        var transactions = client.getTransactions(YearMonth.of(2026, 9));
 
         assertThat(transactions).hasSize(1);
-
-        var transaction=transactions.getFirst();
-
+        var transaction = transactions.getFirst();
         assertThat(transaction.transactionId())
                 .isEqualTo("TX-12345");
-
         assertThat(transaction.creditDebitIndicator())
                 .isEqualTo(CreditDebitIndicator.CREDIT);
-
         assertThat(transaction.money().amount())
                 .isEqualByComparingTo("3500.00");
 
