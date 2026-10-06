@@ -12,7 +12,7 @@
     <artifactId>money-flow</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>money-flow</name>
-    <description>Calculates monthly balance reports from bank</description>
+    <description>Calculates monthly balance reports from bank statements</description>
     <url/>
     <licenses>
         <license/>
