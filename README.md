@@ -85,6 +85,7 @@ These can be handed over to the teams that will implement the two APIs.
   ```
   I could have used modern syntax with Collectors.teeing to calculate both sums in one pass
   ,but it would hurt readability, since most developers would need to look up how teeing works.  
+
   ```java
   validateCurrencies(transactions);
 
@@ -105,3 +106,8 @@ These can be handed over to the teams that will implement the two APIs.
   monthly size and fetch it with one GET request. For very large statements, the
   bank API would need pagination, and the transactions would be fetched and
   summed page by page instead of loading the whole month into memory.  
+  
+- **Currency:** currency handling wasn't part of the task, so I kept it simple:
+  the account is assumed to be in EUR (configured in `application.yaml`). A
+  transaction in any other currency is treated as an error that needs to be
+  checked, and no report is generated for that month.
