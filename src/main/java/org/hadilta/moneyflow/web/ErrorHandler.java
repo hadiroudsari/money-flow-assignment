@@ -1,4 +1,4 @@
-package org.hadilta.moneyflow.trigger;
+package org.hadilta.moneyflow.web;
 
 import org.hadilta.moneyflow.business.CurrencyMismatchException;
 import org.slf4j.Logger;

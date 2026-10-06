@@ -1,9 +1,9 @@
-package org.hadilta.moneyflow.unit.trigger;
+package org.hadilta.moneyflow.unit.web;
 
 import org.hadilta.moneyflow.business.CurrencyMismatchException;
 import org.hadilta.moneyflow.business.MonthlyBalanceService;
 import org.hadilta.moneyflow.model.BalanceReport;
-import org.hadilta.moneyflow.trigger.BalanceReportController;
+import org.hadilta.moneyflow.web.BalanceReportController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
