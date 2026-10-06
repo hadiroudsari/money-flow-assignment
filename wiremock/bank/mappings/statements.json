@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/statements/[0-9]{4}-[0-9]{2}/transactions"
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "jsonBody": [
+      { "transactionId": "TX-1", "bookingDate": "2026-09-01",
+        "money": { "amount": "2500.00", "currency": "EUR" },
+        "creditDebitIndicator": "CREDIT", "description": "salary" },
+      { "transactionId": "TX-2", "bookingDate": "2026-09-03",
+        "money": { "amount": "900.00", "currency": "EUR" },
+        "creditDebitIndicator": "DEBIT", "description": "rent" },
+      { "transactionId": "TX-3", "bookingDate": "2026-09-12",
+        "money": { "amount": "245.50", "currency": "EUR" },
+        "creditDebitIndicator": "DEBIT", "description": "groceries" }
+    ]
+  }
+}
